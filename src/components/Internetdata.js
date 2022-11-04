@@ -47,7 +47,7 @@ function Internetdata ()  {
   }, []);
   const [data, setData] = useState({datasets:[]});
   return (
-        <div style={{maxWidth: 1200, maxHeight: 1200}}>
+        <div >
             <h2>One Month Traffic Change</h2>
             <br/>
             <br/>
