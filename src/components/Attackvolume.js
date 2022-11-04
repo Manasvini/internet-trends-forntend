@@ -40,8 +40,8 @@ function Attackvolume ()  {
   }, []);
   const [data, setData] = useState({datasets:[]});
   return (
-        <div>
-            <br/> <br/>
+        <div style={{maxWidth: 1200, maxHeight: 1200}}>
+            <br/> <br/> <br/><br/> <br/>
             <h2>One Month Attack Layer3</h2>
             <p> The graph shows layer 3 DDoS Attack over the last 30 Days</p>
             <Line data={data}  />

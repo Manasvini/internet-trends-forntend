@@ -47,10 +47,13 @@ function Internetdata ()  {
   }, []);
   const [data, setData] = useState({datasets:[]});
   return (
-        <div>
+        <div style={{maxWidth: 1200, maxHeight: 1200}}>
             <h2>One Month Traffic Change</h2>
+            <br/>
+            <br/>
             The data represents traffic change on the Internet (total and HTTP) over a one month period. 
             <Line data={data}   />
+            <br/>
         </div>
     );
 }

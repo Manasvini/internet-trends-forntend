@@ -6,7 +6,10 @@ import Attackvolume from "./components/Attackvolume"
 
 function App() {
  return (
-    <div>
+    <div   style={{
+        position: 'absolute', left: '50%', top: '0%',
+        transform: 'translate(-50%,0%)'
+    }} >
         <Internetdata />
         <Domains />
         <Attackvolume />

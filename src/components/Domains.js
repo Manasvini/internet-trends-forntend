@@ -20,7 +20,7 @@ function Domains ()  {
     console.log(respdata)
     let json_data = []
     for(let i = 0; i < respdata.length; i++){
-        json_data.push({'rank':respdata[i].rank, 'rankChange':respdata[i].rankChange, 'domain':respdata[i].domain})
+        json_data.push({'rank':parseInt(respdata[i].rank)+1, 'rankChange':respdata[i].rankChange, 'domain':respdata[i].domain})
     }
      
     setData(json_data)
@@ -32,7 +32,7 @@ function Domains ()  {
   }, []);
   const [data, setData] = useState({datasets:[]});
   return (
-       <div style={{ height: 700, width: '100%' }}>
+       <div style={{ height: 750, width: '70%' }} >
         <h2> Popular Domains </h2>
         <p> Websites are ranked by the domain rank and indicate what domains have changed compared to data from the previous 30 day mark</p>
         <DataGrid
@@ -41,7 +41,8 @@ function Domains ()  {
             pageSize={12}
             getRowId={row => row.domain}
          />
-       </div>
+            <br/>
+        </div>
     );
 }
 
