@@ -1,8 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import Internetdata from "./components/Internetdata"
+import Domains from "./components/Domains"
+import Attackvolume from "./components/Attackvolume"
+
+
+
 
 function App() {
-  return (
+ /* return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -18,6 +24,12 @@ function App() {
           Learn React
         </a>
       </header>
+    </div>
+  );*/
+ return (
+    <div>
+        <Internetdata />
+        <Domains />
     </div>
   );
 }
