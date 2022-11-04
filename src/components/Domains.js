@@ -1,12 +1,12 @@
-// ./components/LineChart.js
+// ./components/Domains.js
 import React from "react";
 import { useEffect, useState, useRef } from 'react';
 import { DataGrid } from '@mui/x-data-grid'
 const columns = [
     
     { field: 'rank', headerName: 'Rank' },
-  { field: 'rankChange', headerName: 'Rank Change', width: 300 },
-  { field: 'domain', headerName: 'Domain', width: 600 }
+    { field: 'rankChange', headerName: 'Rank Change', width: 300 },
+    { field: 'domain', headerName: 'Domain', width: 600 }
 ]
 
 
@@ -27,23 +27,21 @@ function Domains ()  {
   }; 
   useEffect(() => {
   
-    // You can await here
     console.log('in use effect')
     getData();
-    // ...
   }, []);
   const [data, setData] = useState({datasets:[]});
-    console.log('in Domains')
   return (
        <div style={{ height: 700, width: '100%' }}>
-      <h2> Popular Domains </h2>
+        <h2> Popular Domains </h2>
+        <p> Websites are ranked by the domain rank and indicate what domains have changed compared to data from the previous 30 day mark</p>
         <DataGrid
-        rows={data}
-        columns={columns}
-        pageSize={12}
-        getRowId={row => row.domain}
-      />
-    </div>
+            rows={data}
+            columns={columns}
+            pageSize={12}
+            getRowId={row => row.domain}
+         />
+       </div>
     );
 }
 
